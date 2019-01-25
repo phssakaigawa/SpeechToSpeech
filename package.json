@@ -13,7 +13,7 @@
     "watson-developer-cloud": "~3.16.1"
   },
   "engines": {
-    "node": "9.x.x"
+    "node": "3.x.x"
   },
   "repository": {
     "type": "git",
