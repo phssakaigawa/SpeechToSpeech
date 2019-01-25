@@ -37,11 +37,11 @@ var config = {
 
 // if bluemix credentials exists, then override local
 var credentials = extend(config, bluemix.getServiceCreds('speech_to_text'));
-function dump(v) {
-  return console.log(util.inspect(v));
-}
+//function dump(v) {
+//  return console.log(util.inspect(v));
+//}
 
-dump(credentials);
+//dump(credentials);
 var authorization = watson.authorization(credentials);
 
 // redirect to https if the app is not running locally
