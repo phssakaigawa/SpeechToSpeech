@@ -43,7 +43,7 @@ function dump(v) {
   return console.log(util.inspect(v));
 }
 
-//dump(credentials);
+dump(credentials);
 var authorization = watson.authorization(credentials);
 
 // redirect to https if the app is not running locally
