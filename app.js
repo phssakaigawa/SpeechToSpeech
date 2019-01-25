@@ -37,9 +37,11 @@ var config = {
 
 // if bluemix credentials exists, then override local
 var credentials = extend(config, bluemix.getServiceCreds('speech_to_text'));
-//function dump(v) {
-//  return console.log(util.inspect(v));
-//}
+// utilモジュールを使います。
+var util = require('util');
+function dump(v) {
+  return console.log(util.inspect(v));
+}
 
 //dump(credentials);
 var authorization = watson.authorization(credentials);
