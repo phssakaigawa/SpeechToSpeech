@@ -84,7 +84,7 @@ var mt_credentials = extend({
   version: 'v2'
 }, bluemix.getServiceCreds('language-translation')); // VCAP_SERVICES
 
-var language_translation = watson.language_translation(mt_credentials);
+var language_translation = watson.LanguageTranslatorV3(mt_credentials);
 
 app.post('/api/translate', function(req, res, next) {
   //console.log('/v2/translate');
