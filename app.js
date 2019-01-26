@@ -31,8 +31,7 @@ var express = require('express'),
 var config = {
   version: 'v1',
   url: 'https://stream.watsonplatform.net/speech-to-text/api',
-  username: '<Your User Name>',
-  password: '<Your Password>'
+  apikey: '<Your API key>'
 };
 
 // if bluemix credentials exists, then override local
@@ -79,8 +78,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 var mt_credentials = extend({
   url: 'https://gateway.watsonplatform.net/language-translator/api',
-  username: '<Your User Name>',
-  password: '<Your Password>',
+  apikey: '<Your API Key>',
   version: 'v2'
 }, bluemix.getServiceCreds('language-translation')); // VCAP_SERVICES
 
