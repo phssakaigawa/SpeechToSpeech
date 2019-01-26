@@ -43,7 +43,7 @@ function dump(v) {
 }
 
 dump(credentials);
-var authorization = watson.authorization(credentials);
+var authorization = new watson.authorization(credentials);
 
 // redirect to https if the app is not running locally
 if (!!process.env.VCAP_SERVICES) {
@@ -104,12 +104,11 @@ app.post('/api/translate', function(req, res, next) {
 var tts_credentials = extend({
   url: 'https://stream.watsonplatform.net/text-to-speech/api',
   version: 'v1',
-  username: '<Your User Name>',
-  password: '<Your Password>',
+  apikey: '<Your API Key>',
 }, bluemix.getServiceCreds('text_to_speech'));
 
 // Create the service wrappers
-var textToSpeech = watson.text_to_speech(tts_credentials);
+var textToSpeech = new watson.text_to_speech(tts_credentials);
 
 app.get('/synthesize', function(req, res) {
   var transcript = textToSpeech.synthesize(req.query);
