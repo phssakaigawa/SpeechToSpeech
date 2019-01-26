@@ -36,13 +36,6 @@ var config = {
 
 // if bluemix credentials exists, then override local
 var credentials = extend(config, bluemix.getServiceCreds('speech_to_text'));
-// utilモジュールを使います。
-var util = require('util');
-function dump(v) {
-  return console.log(util.inspect(v));
-}
-
-dump(credentials);
 var authorization = new watson.authorization(credentials);
 
 // redirect to https if the app is not running locally
