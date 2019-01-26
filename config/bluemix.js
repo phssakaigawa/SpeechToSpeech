@@ -23,8 +23,6 @@ module.exports.getServiceCreds = function(name) {
                 dump(service);
                 return {
                     url: service.credentials.url,
-                    username: service.credentials.username,
-                    password: service.credentials.password,
                     apikey: service.credentials.apikey
                 };
             }
